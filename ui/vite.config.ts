@@ -32,7 +32,7 @@ export default defineConfig(({ command, mode }) => {
     preview: {
       host: '0.0.0.0',
       port: 3000,
-      allowedHosts: 'all',
+      allowedHosts: ['slides.im'],
       proxy: {
         '/web': {
           target: env.SERVICE_BASE_URL,
