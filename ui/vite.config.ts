@@ -37,7 +37,7 @@ export default defineConfig(({ command, mode }) => {
         'www.slides.im',
         'localhost',
         '127.0.0.1'
-      ],
+      ]
     },
     define: {
       // 一定要序列化，否则打包时会报错
