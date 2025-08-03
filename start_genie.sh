@@ -49,7 +49,7 @@ if [ -d "backend" ]; then
         echo "错误: backend/start.sh文件不存在，尝试直接启动jar文件"
         if [ -f "app.jar" ]; then
             echo "启动后端应用"
-            java -jar app.jar 
+            java -jar app.jar &
         else
             echo "错误: backend/app.jar文件不存在"
         fi
@@ -116,7 +116,7 @@ if [ -d "tool" ]; then
     
     if [ -f "start.sh" ]; then
         echo "执行tool/start.sh"
-        sh start.sh 
+        sh start.sh &
     else
         echo "错误: tool/start.sh文件不存在"
     fi
