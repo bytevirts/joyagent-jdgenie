@@ -38,6 +38,7 @@ export default defineConfig(({ command, mode }) => {
           target: env.SERVICE_BASE_URL,
           changeOrigin: true,
         }
+      }
     },
     define: {
       // 一定要序列化，否则打包时会报错
