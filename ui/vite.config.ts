@@ -32,12 +32,7 @@ export default defineConfig(({ command, mode }) => {
     preview: {
       host: '0.0.0.0',
       port: 3000,
-      allowedHosts: [
-        'slides.im',
-        'www.slides.im',
-        'localhost',
-        '127.0.0.1'
-      ]
+      allowedHosts: 'all'
     },
     define: {
       // 一定要序列化，否则打包时会报错
