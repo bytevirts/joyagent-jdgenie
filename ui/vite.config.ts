@@ -29,6 +29,16 @@ export default defineConfig(({ command, mode }) => {
         },
       },
     },
+    preview: {
+      host: '0.0.0.0',
+      port: 4173,
+      allowedHosts: [
+        'slides.im',
+        'www.slides.im',
+        'localhost',
+        '127.0.0.1'
+      ],
+    },
     define: {
       // 一定要序列化，否则打包时会报错
       SERVICE_BASE_URL: JSON.stringify(env.SERVICE_BASE_URL),
