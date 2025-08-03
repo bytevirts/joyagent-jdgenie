@@ -30,7 +30,7 @@ llm:
         "max_tokens": 8192,
         "temperature": 0,
         "base_url": "https://api.deepseek.com",
-        "apikey": ${GENIE_DEEPSEEK_APIKEY},
+        "apikey": "${GENIE_DEEPSEEK_APIKEY}",
         "interface_url": "/chat/completions",
         "max_input_tokens": 8192
     }
