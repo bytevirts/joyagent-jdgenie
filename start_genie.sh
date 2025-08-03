@@ -17,7 +17,7 @@ if [ -d "ui" ]; then
         echo "启动UI预览服务器"
         echo "修改为监听所有接口(0.0.0.0)并使用端口3000"
         # 使用--host和--port参数明确指定监听地址和端口
-        pnpm preview --host 0.0.0.0 --port 3000 &
+        pnpm preview --host 0.0.0.0 --port 3000 --allowedHosts all &
         # 等待服务启动
         sleep 3
         # 检查服务是否正在监听（使用更通用的方法，不依赖netstat）
