@@ -64,9 +64,10 @@ RUN apt-get clean && \
 WORKDIR /app
 
 # 复制前端构建产物
-COPY --from=frontend-builder /app/dist /app/ui/dist
-COPY --from=frontend-builder /app/package.json /app/ui/package.json
-COPY --from=frontend-builder /app/node_modules /app/ui/node_modules
+# COPY --from=frontend-builder /app/dist /app/ui/dist
+# COPY --from=frontend-builder /app/package.json /app/ui/package.json
+# COPY --from=frontend-builder /app/node_modules /app/ui/node_modules
+COPY --from=frontend-builder /app /app/ui
 
 # 复制后端构建产物
 COPY --from=backend-builder /app/target /app/backend/target
