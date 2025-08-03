@@ -26,13 +26,18 @@ export default defineConfig(({ command, mode }) => {
         '/web': {
           target: env.SERVICE_BASE_URL,
           changeOrigin: true,
-        },
-      },
+        }
+      }
     },
     preview: {
       host: '0.0.0.0',
       port: 3000,
-      allowedHosts: 'all'
+      allowedHosts: 'all',
+      proxy: {
+        '/web': {
+          target: env.SERVICE_BASE_URL,
+          changeOrigin: true,
+        }
     },
     define: {
       // 一定要序列化，否则打包时会报错
