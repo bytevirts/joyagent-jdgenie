@@ -10,7 +10,7 @@ logging:
     root: INFO
 llm:
   default:
-    base_url: ${GENIE_BACKEND_BASE_URL}
+    base_url: "https://api.deepseek.com"
     apikey: ${GENIE_BACKEND_APIKEY}
     interface_url: '/chat/completions'
     model: ${GENIE_BACKEND_MODEL}
